@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/myPageStyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bungee&family=Kanit:wght@800&family=PT+Sans+Narrow&family=The+Nautigal:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>My Memora</title>
+  </head>
+  <body>
+    <header>
+      <h3>PROFILE</h3>
+    </header>
+    <div class="myInfo">
+      <h2><%=user.userName%></h2>
+      <form action="/account/<%=user._id%>?_method=UPDATE" method="POST">
+        About Me<br /><input
+          id="myDes"
+          type="text"
+          value="<%=user.description%>"
+          name="description"
+        /><br />
+        <button type="submit">Update description</button>
+      </form>
+    </div>
+    <h2>MY ROOM</h2>
+    <div class="roomInfo">
+      <% if(rooms.length==0){%>
+      <h3>there is no room</h3>
+      <% }else{%>
+      <h3>there are rooms</h3>
+      <% rooms.forEach(function (r) {%>
+      <a href="/lobby/<%=r.location%>/<%=r._id%>"
+        ><button id="roomBut"><p><%=r.title%></p></button></a
+      >
+      <form
+        action="/account/<%=r.location%>/<%=r._id%>?_method=DELETE"
+        class="delete-form"
+        method="POST"
+      >
+        <button id="delete">DELETE</button>
+      </form>
+      <a href="/lobby/<%=r.location%>/<%=r._id%>/edit">
+        <button id="delete">UPDATE</button></a
+      >
+      <br />
+      <% }); %> <% }; %>
+    </div>
+    <a class="back" href="/lobby"><p>LOBBY</p></a>
+  </body>
+</html>

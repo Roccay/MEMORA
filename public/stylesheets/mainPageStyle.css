@@ -1,0 +1,38 @@
+body {
+  background-color: rgb(27, 27, 32);
+}
+h1 {
+  font-family: "Abril Fatface", cursive;
+  color: white;
+  font-size: 80px;
+  word-spacing: 10px;
+  margin: 0px;
+}
+main {
+  height: 200px;
+  width: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+a {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+img {
+  margin-top: 100px;
+}
+
+button:hover {
+  background-color: gray;
+}
+p {
+  text-align: center;
+  color: white;
+  font-family: "PT Sans Narrow", sans-serif;
+  margin: auto;
+}

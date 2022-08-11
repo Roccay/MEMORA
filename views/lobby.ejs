@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/lobbyStyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bungee&family=Kanit:wght@800&family=PT+Sans+Narrow&family=The+Nautigal:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>MEMORA</title>
+  </head>
+  <body>
+    <header>
+      <h3>LOBBY</h3>
+      <% if(accountName==null){ %>
+      <a class="signup" href="/account/signup"><p>Sign up</p></a> <br />
+      <a class="login" href="/account/login"><p>Log in</p></a>
+      <% }else{%>
+      <a class="signup" href="/account/logout"><p>Log out</p></a>
+      <a class="login" href="/account/myPage"><p>Account</p></a>
+      <% };%>
+    </header>
+    <main>
+      <% locationList.forEach(function(l){ %>
+      <a href="/lobby/<%=l%>">
+        <div class="<%=l%>">
+          <img id="<%=l%>" src="/images/<%=l%>.png" />
+          <p><%= l%></p>
+        </div></a
+      >
+      <% }) %>
+    </main>
+  </body>
+</html>

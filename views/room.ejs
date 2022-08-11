@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/roomStyle.css" />
+    <!-- <script src="/javascripts/script.js"></script> -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-latest.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        var pageRefresh = 3000; //5 s
+        setInterval(function () {
+          refresh();
+        }, pageRefresh);
+      });
+      function refresh() {
+        $(".wrapper").load(window.location + " .wrapper");
+      }
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bungee&family=Kanit:wght@200;800&family=PT+Sans+Narrow&family=The+Nautigal:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Memora</title>
+  </head>
+  <body>
+    <aside>
+      <div class="header"></div>
+      <br />
+      <h3><%=room. title %></h3>
+      <br /><span>by <%=room.ownerName%> </span><br />
+      <div class="description"><%=room.description%>...</div>
+      <a href="/lobby/<%=specArea%>"><button>EXIT ROOM</button> </a>
+    </aside>
+    <main>
+      <div class="header"><br />IMPORTANT MESSAGE</div>
+
+      <div class="impMsgBox">
+        <% room.importantPosts.forEach(function(i){%>
+        <p class="bubble2"><%=i.content%></p>
+        <% }) %>
+      </div>
+      <% if(senderName=== room.ownerName){%>
+      <form
+        id="add-post-form"
+        action="/lobby/<%=room.location%>/<%= room._id%>/posts2"
+        method="POST"
+      >
+        <input type="text" name="content" autocomplete="off" />
+        <br />
+        <button type="submit">SEND</button>
+      </form>
+      <% }else{%>
+      <form>
+        <input
+          id="disabled"
+          value="Only the owner of this room can send important message."
+          autocomplete="off"
+          disabled
+        />
+        <br />
+        <button disabled>SEND</button>
+      </form>
+      <%} %>
+    </main>
+    <section>
+      <div class="wrapper">
+        <div class="header"><br />GENERAL CHAT</div>
+        <div class="generalMsgBox">
+          <% room.posts.forEach(function(p){%>
+          <p class="bubble bubble-bottom-left"><%=p.content%></p>
+          <span> &nbsp&nbsp <%=p.name%> &nbsp&nbsp </span>
+
+          <br />
+          <% }) %>
+        </div>
+      </div>
+      <% if(senderName){%>
+      <form
+        id="add-post-form"
+        action="/lobby/<%=room.location%>/<%= room._id%>/posts"
+        method="POST"
+      >
+        <input class="invisible" name="name" value="<%=senderName%>" readonly />
+        <input type="text" name="content" autocomplete="off" autofocus />
+        <br />
+        <button id="generalMsgBut" type="submit">SEND</button>
+      </form>
+      <% }else{%>
+      <form>
+        <input
+          id="disabled"
+          value="Only logged-in users can send messages."
+          autocomplete="off"
+          disabled
+        />
+        <br />
+        <button disabled>SEND</button>
+      </form>
+      <%} %>
+    </section>
+  </body>
+</html>

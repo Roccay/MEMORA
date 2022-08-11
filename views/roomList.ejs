@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/roomListStyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bungee&family=Kanit:wght@800&family=PT+Sans+Narrow&family=The+Nautigal:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Memora</title>
+  </head>
+  <body>
+    <header>
+      <h3><%= specArea%></h3>
+    </header>
+    <div class="wrapper">
+      <main>
+        <ul>
+          <% rooms.forEach(function(r){%> <% if(r.password){%>
+          <li>
+            <a href="/lobby/<%= specArea%>/<%=r._id%>/locked"
+              ><button class="room">
+                <img
+                  id="lock"
+                  src="https://www.freeiconspng.com/thumbs/lock-icon/lock-icon-17.png"
+                />
+                <br />
+                <strong> <%=r.title%></strong><br /><span
+                  ><%= r.description%></span
+                ></button
+              ><br
+            /></a>
+          </li>
+          <% }else{%>
+          <li>
+            <a href="/lobby/<%= specArea%>/<%=r._id%>"
+              ><button class="room">
+                <br />
+                <strong> <%=r.title%></strong><br /><span
+                  ><%= r.description%></span
+                ></button
+              ><br
+            /></a>
+          </li>
+          <% } %> <% }) %><br />
+        </ul>
+      </main>
+      <% if(senderName){%>
+      <a href="/lobby/<%= specArea%>/new"><button class="new">+</button></a
+      ><br />
+      <% }else{%>
+      <a href=""><button id="disabled" class="new" disabled>+</button></a><br />
+      <% }; %>
+      <a class="back" href="/lobby"><p>LOBBY</p></a>
+    </div>
+  </body>
+</html>

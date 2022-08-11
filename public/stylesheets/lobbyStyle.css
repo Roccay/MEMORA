@@ -1,0 +1,89 @@
+body {
+  margin: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(234, 238, 239);
+  background-image: url("/images/title.png");
+  background-size: 700px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+header {
+  height: 150px;
+  background-image: url("/images/halfCircle.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 380px;
+  margin: 0;
+  display: flex;
+}
+h3 {
+  font-family: "Abril Fatface", cursive;
+  margin: auto;
+  letter-spacing: 5px;
+  font-size: 35px;
+  color: rgb(238, 238, 238);
+}
+main {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Bar,
+#Competition,
+#StudyRoom {
+  text-align: center;
+  margin: 10px;
+  height: 70%;
+}
+.Competition,
+.StudyRoom,
+.Bar {
+  border-radius: 20px;
+  margin: 0 50px 50px 50px;
+  height: 60vh;
+  width: 30vh;
+  display: inline-block;
+  background-color: rgb(227, 229, 230);
+  text-align: center;
+  padding: 50px 0 20px 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.Competition:hover,
+.StudyRoom:hover,
+.Bar:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+header a,
+header p {
+  margin: 0px 0 0 -10px;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  padding: 10px 10px 10px 10px;
+  width: 60px;
+  transition: width 0.3s ease-in-out;
+}
+.login {
+  position: absolute;
+  right: 0;
+  top: 30px;
+}
+.signup {
+  position: absolute;
+  right: 0;
+  top: 100px;
+}
+header a:hover {
+  width: 100px;
+}
+main a {
+  color: rgb(49, 84, 128);
+  font-size: 50px;
+  text-decoration: none;
+  font-family: "The Nautigal", cursive;
+  letter-spacing: 6px;
+}

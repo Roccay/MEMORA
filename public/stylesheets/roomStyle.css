@@ -1,0 +1,214 @@
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #70b6d1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(90, 147, 194);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(35, 66, 124);
+}
+
+body {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  background-color: #161616;
+}
+aside .header {
+  border-radius: 10px;
+  margin: 10px;
+  height: 80px;
+  width: 93%;
+  padding: 30px 0 30px 0;
+  background-color: black;
+}
+main .header,
+section .header {
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #161616;
+  height: 120px;
+  color: white;
+  border-left: 1px solid rgb(0, 0, 0);
+  border-right: 1px solid rgb(0, 0, 0);
+  text-align: center;
+}
+aside,
+main,
+section {
+  float: left;
+  clear: none;
+  margin: 0px;
+  height: 98vh;
+}
+aside {
+  text-align: center;
+  background-color: #161616;
+  width: 35vh;
+}
+h3 {
+  margin: 0;
+  font-size: 40px;
+  font-family: "Abril Fatface", cursive;
+  color: white;
+  text-align: center;
+}
+main {
+  width: 80vh;
+}
+
+.impMsgBox,
+.generalMsgBox {
+  color: white;
+  box-shadow: 0px 5px 2px #888888 inset;
+  overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  background-color: rgb(236, 236, 236);
+  width: 100%;
+  height: 69.5%;
+  margin: auto;
+}
+.generalMsgBox {
+  height: 84.5%;
+}
+.impMsgBox {
+  box-shadow: 0px 5px 2px #000000 inset;
+  background-color: rgb(43, 43, 43);
+  border-bottom-left-radius: 10px;
+}
+section {
+  background-color: bisque;
+  height: 80vh;
+  width: 80vh;
+}
+main form,
+section form {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  background-color: #161616;
+}
+input {
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  border-bottom-left-radius: 10px;
+  border-style: none;
+  width: 85%;
+  height: 150px;
+  line-break: auto;
+}
+aside button {
+  background-color: rgb(88, 88, 88);
+  color: rgb(168, 168, 168);
+  width: 300px;
+  margin: 20px;
+  height: 70px;
+  border-radius: 10px;
+  font-family: "Abril Fatface", cursive;
+}
+aside button:hover {
+  background-color: rgb(58, 58, 58);
+}
+.description {
+  font-family: "Kanit", sans-serif;
+  font-size: 15px;
+  padding: 30px;
+  line-height: 30px;
+  background-color: rgb(46, 46, 46);
+  margin: 20px;
+  height: 50%;
+  border-radius: 10px;
+  color: white;
+  text-align: left;
+}
+p {
+  background-color: rgb(31, 31, 31);
+  border-radius: 10px;
+  padding: 10px 20px 10px 20px;
+  margin: 10px 30px 20px 30px;
+}
+.bubble,
+bubble2 {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  background-color: rgb(31, 31, 31);
+  border-radius: 20px;
+  padding: 10px 20px 10px 20px;
+  text-align: left;
+  color: white;
+}
+.bubble2 {
+  background-color: rgb(236, 236, 236);
+  color: black;
+}
+.bubble-bottom-left:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 15px solid rgb(31, 31, 31);
+  border-right: 8px solid transparent;
+  border-top: 10px solid rgb(31, 31, 31);
+  border-bottom: 10px solid transparent;
+  left: -2px;
+  bottom: 2px;
+  transform: rotate(-90deg);
+}
+
+.invisible {
+  display: none;
+}
+span {
+  /* border-bottom: 1px solid rgb(151, 151, 151); */
+  padding-left: 20px;
+  color: rgb(151, 151, 151);
+  font-family: "Kanit", sans-serif;
+}
+#disabled {
+  color: gray;
+  background-color: rgb(185, 185, 185);
+}
+#disabled:focus {
+  outline: none;
+  box-shadow: none;
+}
+main button,
+section button {
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  border-style: none;
+  border-top-right-radius: 10px;
+  transition: background-color 0.1s ease-in-out;
+}
+main button:hover,
+section button:hover {
+  background-color: #a3a3a3;
+}
+.wrapper {
+  height: 80vh;
+}
+.hide {
+  display: none;
+  color: grey;
+}
+span:hover + .hide {
+  display: inline-block;
+  color: red;
+}

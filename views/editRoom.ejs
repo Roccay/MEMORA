@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Memora</title>
+    <link rel="stylesheet" href="/stylesheets/myPageStyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bungee&family=Kanit:wght@800&family=PT+Sans+Narrow&family=The+Nautigal:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header><h3>EDIT</h3></header>
+    <form
+      action="/lobby/<%=room.location%>/<%=room._id%>?_method=UPDATE"
+      method="POST"
+    >
+      title <input type="text" name="title" value="<%=room.title%>" /> <br />
+      description
+      <input type="text" name="description" value="<%=room.description%>" />
+      <br />
+      need password<input
+        type="checkbox"
+        name="password"
+        value="<%=room.password%>"
+      /><br />
+      password<input type="text" name="key" value="<%=room.key%>" /><br />
+      location:<input
+        type="text"
+        name="location"
+        value="<%= specArea %>"
+        readonly
+      /><br />
+      owner:<input type="text" name="ownerName" value="<%=owner%>" readonly />
+      <br />
+
+      <br />
+      <button id="darkTheme" type="submit">UPDATE ROOM</button>
+      <a class="back" href="/account/myPage"><p>BACK</p></a>
+    </form>
+  </body>
+</html>

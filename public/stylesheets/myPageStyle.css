@@ -1,0 +1,134 @@
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #b1b1b1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(80, 82, 83);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(59, 59, 59);
+}
+
+body {
+  margin: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(234, 238, 239);
+  background-image: url("/images/title.png");
+  background-size: 700px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 100vh;
+  text-align: center;
+}
+header {
+  height: 150px;
+  background-image: url("/images/halfCircle.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 380px;
+  margin: 0;
+  display: flex;
+  margin-bottom: 60px;
+}
+h3,
+h2 {
+  font-family: "Abril Fatface", cursive;
+  margin: auto;
+  letter-spacing: 5px;
+  font-size: 35px;
+  color: rgb(238, 238, 238);
+}
+h2 {
+  color: black;
+  border-bottom: 1px solid black;
+}
+.myInfo {
+  text-align: center;
+  float: left;
+  margin: 0;
+  width: 50%;
+
+  height: 70%;
+}
+
+.roomInfo {
+  margin: 0;
+  height: 70%;
+  display: inline-block;
+  overflow: auto;
+  margin-left: 200px;
+  width: 35%;
+}
+#roomBut {
+  border-style: none;
+  height: 50px;
+  width: 300px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.1s ease-in-out;
+}
+#roomBut:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+#delete {
+  margin: 20px 0 20px 0;
+  background-color: rgb(238, 66, 66);
+  border-style: none;
+}
+button {
+  border-radius: 10px;
+}
+.back {
+  text-align: right;
+  position: absolute;
+  bottom: 70px;
+  left: 0px;
+  margin: 0px 0 0 -10px;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  padding: 10px 20px 10px 10px;
+  width: 60px;
+  transition: width 0.3s ease-in-out;
+}
+.back:hover {
+  width: 120px;
+}
+#darkTheme {
+  margin: 20px;
+  padding: 10px;
+  background-color: rgb(21, 21, 22);
+  color: white;
+}
+input {
+  font-family: "Abril Fatface", cursive;
+  margin: 20px;
+  height: 30px;
+  font-size: 30px;
+}
+#userInput {
+  font-family: "Abril Fatface", cursive;
+  font-size: 30px;
+  margin-top: 200px;
+}
+#myDes {
+  margin: 30px;
+  height: 300px;
+  width: 300px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+}
+#myDes:not(:focus) {
+  background-color: rgb(234, 238, 239);
+  border-color: #bdbdbd;
+  border-style: solid;
+  color: #b1b1b1;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/myPageStyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bungee&family=Kanit:wght@800&family=PT+Sans+Narrow&family=The+Nautigal:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Locked Room</title>
+  </head>
+  <body>
+    <header><h3>LOCKED</h3></header>
+    <form
+      id="userInput"
+      action="/lobby/<%=specArea %>/<%=room._id%>/locked/<%=room.key%>"
+      method="POST"
+    >
+      password <%=room.tltle%><br />
+      <input type="text" name="key" /><br />
+
+      <button id="darkTheme" type="submit">ENTER</button>
+    </form>
+
+    <a href="/lobby/<%=specArea %>">
+      <button id="darkTheme" type="submit">BACK</button></a
+    >
+    <a class="back" href="/lobby"><p>LOBBY</p></a>
+  </body>
+</html>

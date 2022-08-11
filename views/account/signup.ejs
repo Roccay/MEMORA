@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/myPageStyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bungee&family=Kanit:wght@800&family=PT+Sans+Narrow&family=The+Nautigal:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Memora Sign Up</title>
+  </head>
+  <body>
+    <header><h3>sign up</h3></header>
+
+    <form id="userInput" action="/account/signup" method="POST">
+      User Name: <input type="text" name="userName" /><br />
+      Password: <input type="password" name="password" /> <br />Introduce
+      Yourself: <input type="text" name="description" /><br />
+
+      <button id="darkTheme" type="submit">create account</button>
+    </form>
+    <a class="back" href="/lobby"><p>LOBBY</p></a>
+  </body>
+</html>
